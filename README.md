@@ -6,12 +6,12 @@ This application is designed specifically for restricted intranet environments (
 
 ---
 
-## 🔒 1. GitHub Security & Repository Sharing Guidelines
+##  1. GitHub Security & Repository Sharing Guidelines
 
 ### 1.1 Public vs. Private Repository Policies
 Because this application is deployed as a live hosted server project within a corporate network, **the source code should NOT be shared in a public GitHub repository**. It must be kept in a **Restricted/Private Repository** due to the following security risks:
 
-* **Hardcoded Credentials:** The system contains local validation passwords (e.g., `"HR@NLCTPS2"`) and internal server directory structures. If exposed publicly, malicious actors could access admin panels or exploit local directories.
+* **Hardcoded Credentials:** The system contains local validation passwords (e.g., `"HR@NLCTPS2www"`) and internal server directory structures. If exposed publicly, malicious actors could access admin panels or exploit local directories.
 * **Sensitive Business Data:** The database consists of an Excel spreadsheet (`main_grievances.xlsx`) containing real names, employee numbers, and private grievance details. Public exposure violates data protection laws and corporate privacy policies.
 * **Security Vector Mapping:** Public repositories make it easy for attackers to map the API endpoints, endpoint schemas, and CORS configurations to launch targeted script injections or denial-of-service attempts.
 
@@ -36,7 +36,7 @@ To maintain top-tier repository hygiene and security:
 
 ---
 
-## 📂 2. Repository Structure & Internal Folder Tree
+##  2. Repository Structure & Internal Folder Tree
 
 To maintain a presentable and clean structure, the directory hierarchy is organized as follows:
 
@@ -75,7 +75,7 @@ Voice_of_People_IGRS/
 
 ---
 
-## 🔄 3. System Workflow & Trigger Sequence Diagram
+##  3. System Workflow & Trigger Sequence Diagram
 
 Below is the execution flow detailing which files trigger sequentially when a user accesses the hosted application:
 
@@ -117,7 +117,7 @@ sequenceDiagram
 
 ---
 
-## 🛠️ 4. Project Technical Specifications
+##  4. Project Technical Specifications
 
 ### 4.1 Tech Stack Used
 * **Frontend Core:** Vanilla HTML5, CSS3 CSS Variables (vibrant glassmorphism, responsive grid), Vanilla ES6 JavaScript (No bloated frameworks like React/Angular).
@@ -151,7 +151,7 @@ sequenceDiagram
 
 ---
 
-## 🛠️ 5. Build, Hosting & Backend Communication Challenges Resolved
+##  5. Build, Hosting & Backend Communication Challenges Resolved
 
 During the build, development, and server hosting setup, several server-level errors and port communication conflicts were diagnosed and resolved:
 
@@ -177,7 +177,7 @@ During the build, development, and server hosting setup, several server-level er
 
 ---
 
-## 🚀 6. Future Innovation Roadmaps
+##  6. Future Innovation Roadmaps
 
 * **Dual Database Sync Layer:** Introduce a local file-based SQLite database for transactional workloads, using the Excel spreadsheet strictly for exports/backups to support high-traffic operations.
 * **Automatic Email Dispatcher:** Hook up an SMTP email worker that automatically sends notification emails to users and HR when grievances are filed.
